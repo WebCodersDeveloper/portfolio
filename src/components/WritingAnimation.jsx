@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function WritingAnimation() {
   const [text, setText] = useState(''); 
-  const fullText = 'This text will be animated!';
+  const fullText = 'Welcome to my projects section. Which of my projects would you like to see? I would ask you to write without mistakes:'
 
   useEffect(() => {
     let index = 0;
@@ -20,6 +20,7 @@ export function WritingAnimation() {
   }, [])
 
   return (
-    <p className=''>{text}</p>
+    <p className='w-full h-[15%] text-3xl font-semibold title text-[#12F7D6] textShadow'>{text}</p>
+    
   )
 }

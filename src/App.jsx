@@ -21,6 +21,9 @@ export default function App() {
           <Link to="/skills" className="link focus-within:text-[#12F7D6] border-b-2 border-transparent focus-within:border-[#12F7D6]">
             Skills
           </Link>
+          <Link to="/projects" className="link focus-within:text-[#12F7D6] border-b-2 border-transparent focus-within:border-[#12F7D6]">
+            My Projects
+          </Link>
         </ul>
       </nav>
       <div className="w-full h-[85%] relative">

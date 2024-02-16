@@ -132,31 +132,70 @@ $bg-pos-y:pos-y();
   background: linear-gradient(90deg, rgba(118,74,188,1) 0%, rgba(0,122,204,1) 100%);
 }
 
-.logo{
-  box-shadow: 0px 0px 12px 2px cyan;
-}
-.logo:nth-child(3){
+.logo:nth-child(1){
   box-shadow: 0px 0px 12px 2px #e34c26;
 }
-.logo:nth-child(5){
+.logo:nth-child(3){
   box-shadow: 0px 0px 12px 2px #2965f1;
 }
-.logo:nth-child(7){
+.logo:nth-child(5){
   box-shadow: 0px 0px 12px 2px #c69;
 }
-.logo:nth-child(9){
+.logo:nth-child(7){
   box-shadow: 0px 0px 12px 2px #f0db4f ;
 }
-.logo:nth-child(11){
+.logo:nth-child(9){
   box-shadow: 0px 0px 12px 2px #61dbfb ;
 }
-.logo:nth-child(13){
+.logo:nth-child(11){
   box-shadow: 0px 0px 12px 2px #764abc ;
 }
-.logo:nth-child(15){
+.logo:nth-child(13){
   box-shadow: 0px 0px 12px 2px #007acc  ;
 }
 
 .textShadow{
   text-shadow: 0px 0px  18px #12F7D6;
+}
+.textShadow2{
+  text-shadow: 0px 0px  10px #12F7D6;
+}
+
+
+
+
+.html-sh{
+  box-shadow: 0px 0px 12px 2px #e34c26;
+  text-shadow: 0px 0px 12px #E34C26;
+}
+.css-sh{
+  box-shadow: 0px 0px 12px 2px #2965f1;
+  text-shadow: 0px 0px 12px #2965f1;
+}
+.sass-sh{
+  box-shadow: 0px 0px 12px 2px #c69;
+  text-shadow: 0px 0px 12px #c69;
+}
+.js-sh{
+  box-shadow: 0px 0px 12px 2px #f0db4f;
+  text-shadow: 0px 0px 12px #f0db4f;
+}
+.react-sh{
+  box-shadow: 0px 0px 12px 2px #61dbfb;
+  text-shadow: 0px 0px 12px #61dbfb;
+}
+.react-sh{
+  box-shadow: 0px 0px 12px 2px #61dbfb;
+  text-shadow: 0px 0px 12px #61dbfb;
+}
+.redux-sh{
+  box-shadow: 0px 0px 12px 2px #764abc;
+  text-shadow: 0px 0px 12px #764abc;
+}
+.typ-sh{
+  box-shadow: 0px 0px 12px 2px #007acc;
+  text-shadow: 0px 0px 12px #007acc;
+}
+::-webkit-scrollbar{
+  display: none;
 }
