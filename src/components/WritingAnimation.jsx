@@ -20,7 +20,7 @@ export function WritingAnimation() {
   }, [])
 
   return (
-    <p className='w-full h-[15%] text-3xl font-semibold title text-[#12F7D6] textShadow'>{text}</p>
+    <p className='w-full h-[15%] text-2xl font-semibold title text-[#12F7D6] textShadow'>{text}</p>
     
   )
 }

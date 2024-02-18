@@ -1,9 +1,23 @@
     import { useState, useEffect } from 'react';
     import { WritingAnimation } from '../components/WritingAnimation';
 
+    import Delever from '../../public/Delever.png'
+    import ProjectBillz from '../../public/ProjectBillz.png'
+    import Weather from '../../public/Weather.png'
+    import Taraqqiyot from '../../public/Taraqqiyot.png'
+
+
+
     export default function Projects() {
     const [inputVisible, setInputVisible] = useState(false);
     const [inputValue, setInputValue] = useState('');
+
+    const [deleverShow, setDeleverShow] = useState(false);
+    const [projectShow, setProjectShow] = useState(false);
+    const [weatherShow, setWeatherShow] = useState(false);
+    const [taraqqiyotShow, setTaraqqiyotShow] = useState(false);
+
+
         const [text, setText] = useState('');
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -14,23 +28,40 @@
     const handleSubmit = (e) => {
         e.preventDefault();
         if (inputValue === 'help') {
-            setText('ProjectBillz, Bootcamp, Weather Beta, Taraqqiyot')
+            setText('You should search for these words: ProjectBillz, Delever, Weather Beta, Taraqqiyot. These are my projects')
         }
         else if(inputValue === 'ProjectBillz'){
             setText(`here is ${inputValue}`)
+            setProjectShow(true)
+            setDeleverShow(false)
+            setWeatherShow(false)
+            setTaraqqiyotShow(false)
         }
-        else if(inputValue === 'Bootcamp'){
+        else if(inputValue === 'Delever'){
             setText(`here is ${inputValue}`)
+            setProjectShow(false)
+            setDeleverShow(true)
+            setWeatherShow(false)
+            setTaraqqiyotShow(false)
         }
         else if(inputValue === 'Weather Beta'){
             setText(`here is ${inputValue}`)
+            setProjectShow(false)
+            setDeleverShow(false)
+            setWeatherShow(true)
+            setTaraqqiyotShow(false)
         }
         else if(inputValue === 'Taraqqiyot'){
             setText(`here is ${inputValue}`)
+            setProjectShow(false)
+            setDeleverShow(false)
+            setWeatherShow(false)
+            setTaraqqiyotShow(true)
         }
         else{
-            setText(`No such code exists: ${inputValue}`);
+            setText(`${inputValue}: is not a git command. If you don't know just write "help"  `);
         }
+        setInputValue('')
     };
 
     return (
@@ -46,13 +77,22 @@
                     onChange={(e) => setInputValue(e.target.value)}
                     type="text" 
                     placeholder="type here..." 
-                    className="h-8 w-[730px] bg-transparent px-1 py-1 absolute outline-none top-[49%] left-[50%] text-2xl font-semibold title text-[#12F7D6] textShadow2" 
+                    className="h-8 w-[730px] bg-transparent px-1 py-1 absolute outline-none top-[41%] left-[17%] text-xl font-semibold title text-[#12F7D6] textShadow2" 
                 />
                 </form>
             )}
             </div>
-            <p className='text-white text-3xl'>{text}</p>
+            <p className='text-2xl font-semibold title text-[#12F7D6] textShadow'>{text}</p>
+            <div>
+                {deleverShow && <div><img src={Delever} alt="Not Found" className='w-96'/></div>}
+                {projectShow && <div><img src={ProjectBillz} alt="Not Found" className='w-96'/></div>}
+                {taraqqiyotShow && <div><img src={Taraqqiyot} alt="Not Found" className='w-96'/></div>}
+                {weatherShow && <div><img src={Weather} alt="Not Found" className='w-96'/></div>}
+            </div>
         </div>
         </div>
     );
     }
+    
+    
+    
